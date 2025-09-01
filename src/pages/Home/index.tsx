@@ -45,37 +45,6 @@ export default function Home() {
         </SectionText>
         <LaunchAppButton />
       </Section>
-      <Box width="100%" display="grid">
-        <Text color="text1" fontSize="32px" fontWeight="700" textAlign="center">
-          Backed By World-Class Partners
-        </Text>
-        <PartnersSection>
-          {partners &&
-            partners.map((partner, index) => (
-              <Item href={partner.url} key={index} id={`partner-${partner.name.toLowerCase()}`}>
-                <img src={partner.logo} style={{ height: '100px', marginRight: '10px', borderRadius: '50%' }} />
-                <ItemText color="text1" fontWeight="700" fontSize="24px">
-                  {partner.name}
-                </ItemText>
-              </Item>
-            ))}
-        </PartnersSection>
-      </Box>
-      <Box width="100%" display="grid">
-        <Text color="text1" fontSize="32px" fontWeight="700" textAlign="center">
-          We are live on these networks
-        </Text>
-        <PartnersSection>
-          {chains.map((chain, index) => (
-            <Item href={chain.url} key={index} id={`chain-${chain.name.toLowerCase()}`}>
-              <img src={chain.logo} style={{ height: '100px', marginRight: '10px', borderRadius: '50%' }} />
-              <ItemText color="text1" fontWeight="700" fontSize="24px" textAlign="center">
-                {chain.name}
-              </ItemText>
-            </Item>
-          ))}
-        </PartnersSection>
-      </Box>
     </Root>
   )
 }
